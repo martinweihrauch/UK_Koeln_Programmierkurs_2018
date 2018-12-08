@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programmierkurs</title>  
+        <meta charset="utf-8"/>      
+    </head>
+    <body>
+        <div id="Ausgabe"></div>
+        <span></span>
+        <script>
+            var ausgabe = document.getElementById("Ausgabe");
+            ausgabe.innerHTML = "Anämietester. Hb ist 15 und Patient männlich";
+        
+            //Patient
+            var Hb = 15;  //  g/dl
+            var gender = "m"; // m= male, f=female, i=intersexual
+for (let i=0; i<100; i++){
+
+
+            //Liegt jetzt eine Anämie bei o. g. Patienten vor?
+            if (gender == "m"){
+                if (Hb < 13.5){
+                    out("<br>Anämie beim Mann!");
+                }
+                else{
+                    out("<br>Es liegt keine Anämie vor!");
+                }
+            }
+            else if (gender == "f"){
+                if(Hb <12 ){
+                    out("<br>Anämie bei der Frau!");
+
+                }
+                else{
+                    out("<br>Es liegt keine Anämie vor!");
+                }
+            }
+}
+        
+            let Haematokrit = HbToHct(Hb, 3);
+            out("Der Hämatokrit beträgt für einen Hb von "+Hb+": "+Haematokrit);
+            
+            function out(text){
+                //ausgabe.innerHTML = ausgabe.innerHTML + text;
+            }
+
+            function HbToHct(Hb, faktor){
+                let Hct = Hb * faktor;
+                return Hct;
+            }
+                     
+            
+            ausgabe.innerHTML += "Bin fertig!";
+            
+        </script>
+    </body>
+</html>
