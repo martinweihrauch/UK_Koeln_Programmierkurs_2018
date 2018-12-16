@@ -5,53 +5,13 @@
         <meta charset="utf-8"/>      
     </head>
     <body>
-        <div id="Ausgabe"></div>
+        <label>Hb: </label><input id="itHb"  type="text" size="5" value="" /> g/dl
+        <br>
+        <label>Hkt: </label><input id="itHkt"  type="text" size="5" value="" /> %
+        <div id="Ausgabe" style="color:blueviolet;font-size:20px;font-weight:bold;font-family:Verdana, Geneva, Tahoma, sans-serif"></div>
         <span></span>
-        <script>
-            var ausgabe = document.getElementById("Ausgabe");
-            ausgabe.innerHTML = "Anämietester. Hb ist 15 und Patient männlich";
-        
-            //Patient
-            var Hb = 15;  //  g/dl
-            var gender = "m"; // m= male, f=female, i=intersexual
-for (let i=0; i<100; i++){
+        <button id="bBerechnen" onclick="HbBerechnen()"  >Berechnen</button>
 
-
-            //Liegt jetzt eine Anämie bei o. g. Patienten vor?
-            if (gender == "m"){
-                if (Hb < 13.5){
-                    out("<br>Anämie beim Mann!");
-                }
-                else{
-                    out("<br>Es liegt keine Anämie vor!");
-                }
-            }
-            else if (gender == "f"){
-                if(Hb <12 ){
-                    out("<br>Anämie bei der Frau!");
-
-                }
-                else{
-                    out("<br>Es liegt keine Anämie vor!");
-                }
-            }
-}
-        
-            let Haematokrit = HbToHct(Hb, 3);
-            out("Der Hämatokrit beträgt für einen Hb von "+Hb+": "+Haematokrit);
-            
-            function out(text){
-                //ausgabe.innerHTML = ausgabe.innerHTML + text;
-            }
-
-            function HbToHct(Hb, faktor){
-                let Hct = Hb * faktor;
-                return Hct;
-            }
-                     
-            
-            ausgabe.innerHTML += "Bin fertig!";
-            
-        </script>
+        <script src="./anaemie.js" type="text/javascript"></script>
     </body>
 </html>
