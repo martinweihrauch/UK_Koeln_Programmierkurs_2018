@@ -1,0 +1,19 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> <!-- Befehle, die gleichzeitig enden, müssen mit einem / direkt beendet werden.-->
+        <title>BGA-Analyse</title>
+    </head>
+    <body>
+        <label>pH:</label> <input id="itpH" type="text" size="5" maxlength="6"/> <br/>
+        <label>pO<sub>2</sub></label> <input id="itpO2" type="text" size="5" maxlength="6"/> mmHg <br/>
+        <label>pCO<sub>2</sub></label> <input id="itpCO2" type="text" size="5" maxlength="6"/> mmHg <br/>
+        <label>HCO<sub>3</sub><sup>-</sup></label> <input id="itHCO3" type="text" size="5" maxlength="6"/> mmol/l <br/>
+        <label>Na<sup>+</sup></label> <input id="itNa" type="text" size="5" maxlength="6"/> mmol/l <br/>
+        <label>Cl<sup>-</sup></label> <input id="itCl" type="text" size="5" maxlength="6"/> mmol/l <br/>
+        <div id="Ausgabe"></div>
+        <span></span>
+        <button id="bBerechnen" onclick="BGAAnalyse()">BGA analysieren</button>
+        <script src="./bga_js.js" type="text/javascript"></script>
+    </body>
+</html>
