@@ -163,16 +163,16 @@ var ausgabe = document.getElementById("Ausgabe");
 
             if (gender === "female") {
                 if (gesamtBilirubin > 1.1) {
-                    if (indirektesBilirubin > 0.8 && direktesBilirubin < 0.25 && urinBilirubin === false && urinUrobilinogen === true && alat < 50 && gammaGT < 28) {
+                    if (indirektesBilirubin > 0.8 && direktesBilirubin < 0.25 && urinBilirubin === false && urinUrobilinogen === true && alat < 35 && gammaGT < 18) {
                         IkterusTester("<br><br> Werte: " + "<br> Geschlecht: " + gender + "<br> Gesamt-Bilirubin: " + gesamtBilirubin + " mg/dl" + "<br> Indirektes Bilirubin:  " + indirektesBilirubin + " mg/dl" + "<br> Direktes Bilirubin: " + direktesBilirubin + " mg/dl" + "<br> Urin-Bilirubin: " + urinBilirubin + "<br> Urin-Urobilinogen: " + urinUrobilinogen + "<br> ALAT: " + alat + " U/l" + "<br> Gamma-GT: " + gammaGT + " U/l" + "<br><br> Auswertung:" + "<br> Es liegt eine Hyperbilirubinämie vor!" + "<br> Es liegt ein prähepatischer Ikterus vor!");
                     }
-                    else if (indirektesBilirubin < 0.8 && direktesBilirubin > 0.25 && urinBilirubin === true && urinUrobilinogen === false && alat > 50 && gammaGT > 28) {
+                    else if (indirektesBilirubin < 0.8 && direktesBilirubin > 0.25 && urinBilirubin === true && urinUrobilinogen === false && alat > 35 && gammaGT > 18) {
                         IkterusTester("<br><br> Werte: " + "<br> Geschlecht: " + gender + "<br> Gesamt-Bilirubin: " + gesamtBilirubin + " mg/dl" + "<br> Indirektes Bilirubin:  " + indirektesBilirubin + " mg/dl" + "<br> Direktes Bilirubin: " + direktesBilirubin + " mg/dl" + "<br> Urin-Bilirubin: " + urinBilirubin + "<br> Urin-Urobilinogen: " + urinUrobilinogen + "<br> ALAT: " + alat + " U/l" + "<br> Gamma-GT: " + gammaGT + " U/l" + "<br><br> Auswertung:" + "<br>Es liegt eine Hyperbilirubinämie vor!" + "<br> Es liegt ein posthepatischer Ikterus vor!");
                     }
-                    else if (indirektesBilirubin > 0.8 && direktesBilirubin < 0.25 && urinBilirubin === false && urinUrobilinogen === false && alat < 50 && gammaGT < 28) {
+                    else if (indirektesBilirubin > 0.8 && direktesBilirubin < 0.25 && urinBilirubin === false && urinUrobilinogen === false && alat < 50 && gammaGT < 18) {
                         IkterusTester("<br><br> Werte: " + "<br> Geschlecht: " + gender + "<br> Gesamt-Bilirubin: " + gesamtBilirubin + " mg/dl" + "<br> Indirektes Bilirubin:  " + indirektesBilirubin + " mg/dl" + "<br> Direktes Bilirubin: " + direktesBilirubin + " mg/dl" + "<br> Urin-Bilirubin: " + urinBilirubin + "<br> Urin-Urobilinogen: " + urinUrobilinogen + "<br> ALAT: " + alat + " U/l" + "<br> Gamma-GT: " + gammaGT + " U/l" + "<br><br> Auswertung:" +  "<br>Es liegt eine Hyperbilirubinämie vor!" + "<br> Es liegt ein intrahepatischer Ikterus vor!" + "<br> Es liegt eine Bilirubinkonjugationsstörung vor!");
                     }
-                    else if (indirektesBilirubin > 0.8 && direktesBilirubin > 0.25 && urinBilirubin === true && alat > 50 && gammaGT > 28) {
+                    else if (indirektesBilirubin > 0.8 && direktesBilirubin > 0.25 && urinBilirubin === true && alat > 35 && gammaGT > 18) {
                         IkterusTester("<br><br> Werte: " + "<br> Geschlecht: " + gender + "<br> Gesamt-Bilirubin: " + gesamtBilirubin + " mg/dl" + "<br> Indirektes Bilirubin:  " + indirektesBilirubin + " mg/dl" + "<br> Direktes Bilirubin: " + direktesBilirubin + " mg/dl" + "<br> Urin-Bilirubin: " + urinBilirubin + "<br> Urin-Urobilinogen: " + urinUrobilinogen + "<br> ALAT: " + alat + " U/l" + "<br> Gamma-GT: " + gammaGT + " U/l" + "<br><br> Auswertung:" +  "<br>Es liegt eine Hyperbilirubinämie vor!" + "<br> Es liegt ein intrahepatischer Ikterus vor!" + "<br> Es liegt eine Leberzellschädigung vor!");
                     }
                     else {    
